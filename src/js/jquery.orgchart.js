@@ -182,7 +182,7 @@
         $chart.data('panning', false);
         return;
       } else {
-        $chart.css('cursor', 'move').data('panning', true);
+        $chart.css('cursor', 'grabbing').data('panning', true);
       }
       var lastX = 0;
       var lastY = 0;
@@ -246,7 +246,7 @@
     //
     panEndHandler: function (e) {
       if (e.data.chart.data('panning')) {
-        e.data.chart.data('panning', false).css('cursor', 'default').off('mousemove');
+        e.data.chart.data('panning', false).css('cursor', 'grab').off('mousemove');
       }
     },
     //
